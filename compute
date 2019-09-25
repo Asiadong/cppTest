@@ -1,0 +1,35 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+void multi(int a,int b){
+	
+	}//Of nulti
+int main(){
+	unsigned char *value=NULL;
+	int s;
+	int length;
+	int temp=0;
+	int er=0;
+	cout<<"Please Input:";
+	cin>>s;
+	length=(int)ceil(s*1.0/2.56);
+	value= (unsigned char*)malloc(sizeof(char)*length);
+	value[0]=2;
+	//cout<<length<<endl;
+	for(int j=0;j<s-1;j++)
+	for(int i=0;i<length-1;i++){
+	temp=value[i]*2;
+		value[i]=temp%100+er;
+		er=temp/100;
+		}
+		er=0;
+		//value[length-1]*=2;
+		for(int i=0;i<length;i++){
+			if(value[length-1-i]<10)
+			cout<<0;
+		cout<<(unsigned int)value[length-1-i];
+		}
+		cout<<endl;
+	
+	return 0;
+	}
